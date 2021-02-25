@@ -5,7 +5,7 @@
 //    Além disso, vai precisar de fazer uma checagem a cada iteração e armazenar
 //    os resultados em algum lugar.
 
-const number = 138;
+const number = 139;
 let divider = number;
 let dividersCounter = 0;
 
@@ -16,7 +16,7 @@ for (let i = 0; i < number; i++) {
   divider--
 }
 
-if (dividersCounter ==2) {
+if (dividersCounter ===  2 || number === 1) {
   console.log(`O número ${number} é um número primo.`);
 } else {
   console.log(`O número ${number} NÃO é um número primo.`);
