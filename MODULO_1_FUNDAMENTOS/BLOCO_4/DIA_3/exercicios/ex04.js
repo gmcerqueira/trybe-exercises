@@ -1,24 +1,28 @@
 // Imprima uma pirâmide com 5 asteriscos de base.
 
-const base = 5;
-let numSpaces = base - (base % 2);
+let base = 7;
+base % 2 == 0 ? base++ : base;
+let numSpaces = (base - (base % 2)) / 2;
 let asterisk = "*";
 const space = " ";
+const lastLine = base / 2 + 0.5;
 
 if (base > 1) {
-  for (let lineIndex = 1; lineIndex <= base; lineIndex += 2) {
+  for (let lineIndex = 1; lineIndex <= lastLine; lineIndex++, numSpaces--) {
     let line = "";
+    let endAsterisks = base - numSpaces;
 
-    for (let spaceIndex = 0; spaceIndex <= numSpaces; spaceIndex++) {
-      if (spaceIndex == numSpaces / 2) {
+    for (let spaceIndex = 0; spaceIndex < base; spaceIndex++) {
+      if (spaceIndex >= numSpaces && spaceIndex < endAsterisks) {
         line += asterisk;
       } else {
         line += space;
       }
     }
-
-    numSpaces -= 2;
-    asterisk += "**";
     console.log(line);
   }
 }
+
+("   *");
+("   *   ");
+("  ***  ");
