@@ -14,18 +14,11 @@ function textYouTwoYearsFromNow(text) {
 
 /*
   2 - Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
-*/
-function changeColorTrybe(element) {
-  let elementChange = document.getElementsByClassName(element);
-  elementChange[0].style.backgroundColor = "rgb(76,164,109)";
-}
-
-/*
 3 - Crie uma função que mude a cor do quadrado vermelho para branco.
 */
-function changeColorWhite(element) {
+function changeBackgroundColor(element, color) {
   let elementChange = document.getElementsByClassName(element);
-  elementChange[0].style.backgroundColor = "white";
+  elementChange[0].style.backgroundColor = color;
 }
 
 /*
@@ -61,12 +54,15 @@ textYouTwoYearsFromNow(
   "Em dois anos me vejo... Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur optio libero molestias repellendus minus facilis ipsum doloremque facere vel, architecto numquam distinctio dignissimos dolorem amet id repudiandae totam nesciunt debitis!"
 );
 
-changeColorTrybe("main-content");
+changeBackgroundColor("main-content", "rgb(76,164,109)");
 
-changeColorWhite("center-content");
+changeBackgroundColor("center-content", "white");
 
 correctTitle();
 
 paragraphUpperCase();
 
-showOnConsole()
+showOnConsole();
+
+
+// git commit -am "Unificando funcoes dos exercicios 2 e 3 para troca de cor de fundo"
