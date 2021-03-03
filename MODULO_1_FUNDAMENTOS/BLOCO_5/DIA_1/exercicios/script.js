@@ -51,7 +51,9 @@ function showOnConsole(element) {
 
 // Execução das funções
 textYouTwoYearsFromNow(
-  "Em dois anos me vejo... Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur optio libero molestias repellendus minus facilis ipsum doloremque facere vel, architecto numquam distinctio dignissimos dolorem amet id repudiandae totam nesciunt debitis!",'p',0
+  "Em dois anos me vejo... Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur optio libero molestias repellendus minus facilis ipsum doloremque facere vel, architecto numquam distinctio dignissimos dolorem amet id repudiandae totam nesciunt debitis!",
+  "p",
+  0
 );
 
 changeBackgroundColor("main-content", "rgb(76,164,109)");
