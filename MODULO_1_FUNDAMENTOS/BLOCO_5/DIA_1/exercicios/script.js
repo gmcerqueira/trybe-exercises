@@ -5,11 +5,11 @@
   - document.getElementsByTagName()
   1 - Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
 */
-function textYouTwoYearsFromNow(text) {
-  let tagsP = document.getElementsByTagName("p");
+function textYouTwoYearsFromNow(text, element, position) {
+  let tag = document.getElementsByTagName(element);
 
-  let firstP = tagsP[0];
-  firstP.innerText = text;
+  let textPosition = tag[position];
+  textPosition.innerText = text;
 }
 
 /*
@@ -51,7 +51,7 @@ function showOnConsole(element) {
 
 // Execução das funções
 textYouTwoYearsFromNow(
-  "Em dois anos me vejo... Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur optio libero molestias repellendus minus facilis ipsum doloremque facere vel, architecto numquam distinctio dignissimos dolorem amet id repudiandae totam nesciunt debitis!"
+  "Em dois anos me vejo... Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur optio libero molestias repellendus minus facilis ipsum doloremque facere vel, architecto numquam distinctio dignissimos dolorem amet id repudiandae totam nesciunt debitis!",'p',0
 );
 
 changeBackgroundColor("main-content", "rgb(76,164,109)");
@@ -60,6 +60,6 @@ changeBackgroundColor("center-content", "white");
 
 correctTitle();
 
-paragraphUpperCase();
+upperCase("p");
 
 showOnConsole("p");
