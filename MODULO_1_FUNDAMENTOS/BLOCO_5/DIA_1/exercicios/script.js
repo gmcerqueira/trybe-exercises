@@ -32,10 +32,10 @@ function correctTitle() {
 /*
 5 - Crie uma função que modifique todo o texto da tag < p > para maiúsculo.
 */
-function paragraphUpperCase() {
-  let paragraphs = document.getElementsByTagName("p");
-  for (let i = 0; i < paragraphs.length; i += 1) {
-    paragraphs[i].style.textTransform = "uppercase";
+function upperCase(element) {
+  let upperElement = document.getElementsByTagName(element);
+  for (let i = 0; i < upperElement.length; i += 1) {
+    upperElement[i].style.textTransform = "uppercase";
   }
 }
 
