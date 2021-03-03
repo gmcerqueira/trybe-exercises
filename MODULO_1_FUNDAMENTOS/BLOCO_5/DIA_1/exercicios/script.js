@@ -16,14 +16,15 @@ function textYouTwoYearsFromNow(text) {
   2 - Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
 */
 function changeColorTrybe(element) {
-  let mainContent = document.getElementsByClassName(element);
-  console.log(mainContent[0]);
-  mainContent[0].style.backgroundColor = "rgb(76,164,109)";
+  let elementChange = document.getElementsByClassName(element);
+  console.log(elementChange[0]);
+  elementChange[0].style.backgroundColor = "rgb(76,164,109)";
 }
 
 /*
   3 - Crie uma função que mude a cor do quadrado vermelho para branco.
 */
+
 
 /*
   4 - Crie uma função que corrija o texto da tag<h1>.
