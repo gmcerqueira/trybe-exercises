@@ -17,26 +17,44 @@ function textYouTwoYearsFromNow(text) {
 */
 function changeColorTrybe(element) {
   let elementChange = document.getElementsByClassName(element);
-  console.log(elementChange[0]);
   elementChange[0].style.backgroundColor = "rgb(76,164,109)";
 }
 
 /*
-  3 - Crie uma função que mude a cor do quadrado vermelho para branco.
+3 - Crie uma função que mude a cor do quadrado vermelho para branco.
 */
-
+function changeColorWhite(element) {
+  let elementChange = document.getElementsByClassName(element);
+  elementChange[0].style.backgroundColor = "white";
+}
 
 /*
   4 - Crie uma função que corrija o texto da tag<h1>.
 */
+function correctTitle() {
+  let title = document.getElementsByTagName("h1")[0];
+  title.innerText = "Exercício 5.1 - JavaScript";
+}
 
 /*
 6 - Crie uma função que modifique todo o texto da tag < p > para maiúsculo.
 */
+function paragraphUpperCase() {
+  let paragraphs = document.getElementsByTagName("p");
+  for (let i = 0; i < paragraphs.length; i += 1) {
+    paragraphs[i].style.textTransform = "uppercase";
+  }
+}
 
 /*
   7 - Crie uma função que exiba o conteúdo de todas as tags <p> no console.
 */
+function showOnConsole() {
+  let paragraphs = document.getElementsByTagName("p");
+  for (let i = 0; i < paragraphs.length; i += 1) {
+    console.log(paragraphs[i]);
+  }
+}
 
 // Execução das funções
 textYouTwoYearsFromNow(
@@ -44,3 +62,11 @@ textYouTwoYearsFromNow(
 );
 
 changeColorTrybe("main-content");
+
+changeColorWhite("center-content");
+
+correctTitle();
+
+paragraphUpperCase();
+
+showOnConsole()
