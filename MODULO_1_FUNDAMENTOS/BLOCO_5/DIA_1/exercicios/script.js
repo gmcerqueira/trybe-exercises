@@ -37,7 +37,7 @@ function correctTitle() {
 }
 
 /*
-6 - Crie uma função que modifique todo o texto da tag < p > para maiúsculo.
+5 - Crie uma função que modifique todo o texto da tag < p > para maiúsculo.
 */
 function paragraphUpperCase() {
   let paragraphs = document.getElementsByTagName("p");
@@ -47,7 +47,7 @@ function paragraphUpperCase() {
 }
 
 /*
-  7 - Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+  6 - Crie uma função que exiba o conteúdo de todas as tags <p> no console.
 */
 function showOnConsole() {
   let paragraphs = document.getElementsByTagName("p");
