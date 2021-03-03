@@ -42,10 +42,10 @@ function paragraphUpperCase() {
 /*
   6 - Crie uma função que exiba o conteúdo de todas as tags <p> no console.
 */
-function showOnConsole() {
-  let paragraphs = document.getElementsByTagName("p");
-  for (let i = 0; i < paragraphs.length; i += 1) {
-    console.log(paragraphs[i]);
+function showOnConsole(element) {
+  let consoleElement = document.getElementsByTagName(element);
+  for (let i = 0; i < consoleElement.length; i += 1) {
+    console.log(consoleElement[i]);
   }
 }
 
@@ -62,7 +62,4 @@ correctTitle();
 
 paragraphUpperCase();
 
-showOnConsole();
-
-
-// git commit -am "Unificando funcoes dos exercicios 2 e 3 para troca de cor de fundo"
+showOnConsole("p");
