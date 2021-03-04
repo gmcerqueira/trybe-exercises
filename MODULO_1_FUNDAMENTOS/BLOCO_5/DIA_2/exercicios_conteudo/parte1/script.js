@@ -20,4 +20,4 @@ console.log(whereYouAre.nextSibling);
 console.log(whereYouAre.nextSibling.nextSibling);
 
 // 8 -Agora acesse o terceiroFilho a partir de pai.
-console.log(father.lastElementChild);
+console.log(father.lastElementChild.previousElementSibling);
