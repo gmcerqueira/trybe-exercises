@@ -240,7 +240,7 @@ function newTaskDiv(text, color) {
   document.querySelector(".my-tasks").appendChild(label);
 }
 
-newTaskDiv("teste", "green");
+newTaskDiv("Projeto:", "green");
 
 /*
 Exercício 9
