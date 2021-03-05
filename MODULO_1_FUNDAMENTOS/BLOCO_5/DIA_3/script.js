@@ -24,7 +24,7 @@ createDaysOfTheWeek();
 // Escreva seu código abaixo.
 /*
 Exercício 1:
-O array dezDaysList contém os dois últimos dias de novembro e os dias do mês de dezembro.
+O array decDaysList contém os dois últimos dias de novembro e os dias do mês de decembro.
 Desenvolva uma função que crie dinamicamente cada dia do calendário e os adicione como filhos/filhas
 da tag < ul > com ID "days".Note que os dias 29 e 30 de novembro estão no array pois representam
 respectivamente Segunda-feira e Terça-feira.
@@ -35,37 +35,52 @@ respectivamente Segunda-feira e Terça-feira.
   - Os dias 4, 11, 18 e 25 são Sexta-feira. Eles devem conter a classe day e a classe friday.
     Ex: <li class="day friday">4</li>
 */
-// const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];;
-const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-
-function isHoliday(day, daysHoliday) {
-  if (daysHoliday.includes(day)) return true;
+// const decDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];;
+const decDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+const decFridays = [4, 11, 18, 25]
+const decHolidays = [24, 25, 31]
+const december = {
+  days: decDaysList,
+  fridays: decFridays,
+  holidays: decHolidays
 }
 
-function isFriday(day, daysFriday) {
-  if (daysFriday.includes(day)) return true;
+function isHoliday(day, holidays) {
+  if (holidays.includes(day)) return true;
 }
 
-function isFridayOrHoliday(day, daysFriday, daysHoliday) {
+function isFriday(day, fridays) {
+  if (fridays.includes(day)) return true;
+}
+
+function isFridayOrHoliday(day, fridays, holidays) {
   let classes = "day";
-  if (isFriday(day, daysFriday) && isHoliday(day, daysHoliday))
+  if (isFriday(day, fridays) && isHoliday(day, holidays))
     return classes + " friday holiday";
-  if (isFriday(day, daysFriday)) return classes + " friday";
-  if (isHoliday(day, daysHoliday)) return classes + " holiday";
+  if (isFriday(day, fridays)) return classes + " friday";
+  if (isHoliday(day, holidays)) return classes + " holiday";
   return classes;
 }
 
-function calenderDays(month) {
+function calenderDays(array) {
+  let month = Object.values(array)[0]
+  let fridays = Object.values(array)[1]
+  let holidays = Object.values(array)[2]
+
   for (const day in month) {
     let listItem = document.createElement("li");
-    listItem.className = isFridayOrHoliday(
-      month[day],
-      [4, 11, 18, 25],
-      [24, 25, 31]
-    );
     listItem.innerText = month[day];
+    listItem.className = isFridayOrHoliday(month[day], fridays, holidays)
     document.querySelector("#days").appendChild(listItem);
   }
 }
 
-calenderDays(dezDaysList);
+calenderDays(december);
+
+/*
+Exercício 2:
+Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente
+um botão com o nome "Feriados".
+  - Adicione a este botão a ID "btn-holiday" .
+  - Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
+*/
