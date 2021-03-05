@@ -218,7 +218,7 @@ function newTaskSpan(text) {
   return task;
 }
 
-newTaskSpan("teste");
+newTaskSpan("Projeto:");
 
 /*
 Exercício 8:
