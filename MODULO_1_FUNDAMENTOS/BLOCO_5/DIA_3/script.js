@@ -36,14 +36,48 @@ respectivamente Segunda-feira e Terça-feira.
     Ex: <li class="day friday">4</li>
 */
 // const decDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];;
-const decDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-const decFridays = [4, 11, 18, 25]
-const decHolidays = [24, 25, 31]
+const decDaysList = [
+  29,
+  30,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+];
+const decFridays = [4, 11, 18, 25];
+const decHolidays = [24, 25, 31];
 const december = {
   days: decDaysList,
   fridays: decFridays,
-  holidays: decHolidays
-}
+  holidays: decHolidays,
+};
 
 function isHoliday(day, holidays) {
   if (holidays.includes(day)) return true;
@@ -63,14 +97,14 @@ function isFridayOrHoliday(day, fridays, holidays) {
 }
 
 function calenderDays(array) {
-  let month = Object.values(array)[0]
-  let fridays = Object.values(array)[1]
-  let holidays = Object.values(array)[2]
+  let month = Object.values(array)[0];
+  let fridays = Object.values(array)[1];
+  let holidays = Object.values(array)[2];
 
   for (const day in month) {
     let listItem = document.createElement("li");
     listItem.innerText = month[day];
-    listItem.className = isFridayOrHoliday(month[day], fridays, holidays)
+    listItem.className = isFridayOrHoliday(month[day], fridays, holidays);
     document.querySelector("#days").appendChild(listItem);
   }
 }
@@ -84,3 +118,33 @@ um botão com o nome "Feriados".
   - Adicione a este botão a ID "btn-holiday" .
   - Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
 */
+
+function createButton(text, id) {
+  let button = document.createElement("button");
+  button.id = id;
+  button.innerText = text;
+  document.querySelector(".buttons-container").appendChild(button);
+}
+
+createButton("Feriados", "btn-holiday");
+
+/*
+Exercício 3:
+Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday".
+  - É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)".
+*/
+
+function changeColor(color) {
+  let backgroundColor = "rgb(238,238,238)";
+
+  const holidays = document.querySelectorAll(".holiday");
+  for (let i = 0; i < holidays.length; i++) {
+    const holiday = holidays[i];
+    if (holidays[i].style.backgroundColor === color)
+      holidays[i].style.backgroundColor = backgroundColor;
+    else holidays[i].style.backgroundColor = color;
+  }
+}
+
+let holidayButton = document.querySelector("#btn-holiday");
+holidayButton.addEventListener("click", () => changeColor("white"));

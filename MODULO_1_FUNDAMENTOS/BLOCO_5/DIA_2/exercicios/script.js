@@ -55,6 +55,7 @@ const list = document.createElement("ul");
 for (const i in numbersInFull) {
   const listItem = document.createElement("li");
   listItem.innerText = numbersInFull[i]
+  listItem.style.color = 'white'
   list.appendChild(listItem)
 }
 rightContent.appendChild(list)
@@ -64,6 +65,7 @@ for (let i = 1; i <= 3; i++) {
   const h3 = document.createElement('h3')
   h3.innerText = `Teste ${i}`
   h3.className = 'description'
+  h3.style.backgroundColor = 'yellow'
   mainContent.appendChild(h3)
 }
 
