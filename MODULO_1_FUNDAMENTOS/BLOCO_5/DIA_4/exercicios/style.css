@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#main {
+  margin: 0 auto;
+  width: 400px;
+  height: 100vh;
+}
+
+#text {
+  margin: 10% 0;
+  font-family: cursive;
+}
+
+.field label {
+  display: inline-block;
+  width: 170px;
+  text-align: end;
+  margin-bottom: 10px;
+}
+.field button{
+  box-sizing: content-box;
+  padding: 5px 10px;
+  margin: 10px 30%;
+}
