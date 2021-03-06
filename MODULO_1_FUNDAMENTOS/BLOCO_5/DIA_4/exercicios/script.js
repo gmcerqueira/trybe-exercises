@@ -21,22 +21,34 @@ function loadPreferences(storage) {
   textStyle.fontFamily = preferencesArray[4];
 }
 
+function inputChange(input) {
+  input.addEventListener("input", () => {
+    if (input.id === "background_color")
+      textStyle.backgroundColor = input.value;
+    if (input.id === "color") textStyle.color = input.value;
+    if (input.id === "font_size") textStyle.fontSize = input.value + "px";
+    if (input.id === "line_height") textStyle.lineHeight = input.value + "px";
+    if (input.id === "font_family") textStyle.fontFamily = input.value;
+  });
+}
+
 let textStyle = document.getElementById("text").style;
 let buttonTextPreferences = document.getElementById("text_preferences");
-let input = document.querySelectorAll("input");
+let inputs = document.querySelectorAll("input");
 let storage = localStorage;
 
-loadPreferences(storage)
+inputs.forEach((input) => inputChange(input));
 
+loadPreferences(storage);
 
 buttonTextPreferences.addEventListener("click", (event) => {
   event.preventDefault();
   let preferences = {
-    backgroundColor: input[0].value,
-    color: input[1].value,
-    fontSize: input[2].value + "px",
-    lineHeight: input[3].value + "px",
-    fontFamily: input[4].value,
+    backgroundColor: inputs[0].value,
+    color: inputs[1].value,
+    fontSize: inputs[2].value + "px",
+    lineHeight: inputs[3].value + "px",
+    fontFamily: inputs[4].value,
   };
   storage.setItem("preferences", JSON.stringify(preferences));
   document.location.reload();
