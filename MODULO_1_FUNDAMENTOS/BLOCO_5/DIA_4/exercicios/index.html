@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Cinzel&family=Dancing+Script&family=Grenze+Gotisch&family=Orbitron&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
@@ -20,26 +25,31 @@
       <form>
         <section class="field">
           <label for="">Cor de fundo: </label>
-          <input id="background_color" type="text" />
+          <input
+            class="input"
+            id="background_color"
+            type="color"
+            value="#ffffff"
+          />
         </section>
         <section class="field">
           <label for="">Cor do texto: </label>
-          <input id="color" type="text" />
+          <input class="input" id="color" type="color" />
         </section>
         <section class="field">
           <label for="">Tamanho da fonte: </label>
-          <input id="font_size" type="number" />
+          <input class="input" id="font_size" type="number" />
         </section>
         <section class="field">
           <label for="">Espaçamento entre linhas: </label>
-          <input id="line_height" type="number" />
+          <input class="input" id="line_height" type="number" />
         </section>
         <section class="field">
           <label for="">Tipo da fonte: </label>
-          <input id="font_family" type="text" />
-          <button id="text_preferences">Salvar configurações
+          <select class="input" id="font_family"></select>
+          <button id="save_preferences">Salvar configurações</button>
+          <button id="delete_preferences">Deletar configurações</button>
         </section>
-        </button>
       </form>
     </main>
   </body>

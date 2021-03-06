@@ -11,7 +11,8 @@
 
 #text {
   margin: 10% 0;
-  font-family: cursive;
+  padding: 20px;
+  text-align: justify;
 }
 
 .field label {
@@ -20,8 +21,13 @@
   text-align: end;
   margin-bottom: 10px;
 }
+
+.field input{
+  width: 48px;
+}
+
 .field button{
   box-sizing: content-box;
   padding: 5px 10px;
-  margin: 10px 30%;
+  margin: 10px;
 }
