@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Sing up</h1>
+    <form action="" method="GET">
+      <fieldset id="personal-data">
+        <h1>Personal data:</h1>
+        <label for="name">Name: </label>
+        <input
+          class="input"
+          type="text"
+          name="name"
+          id="name"
+          maxlength="40"
+          required
+          value="Lucas Oliveira"
+        />
+        <br />
+        <label for="email">Email: </label>
+        <input
+          class="input"
+          type="email"
+          name="email"
+          id="email"
+          maxlength="50"
+          required
+          value="exemplo@exemplo.com"
+        />
+        <br />
+        <label for="cpf">CPF: </label>
+        <input
+          class="input"
+          type="text"
+          name="cpf"
+          id="cpf"
+          maxlength="11"
+          required
+          value="12345678910"
+        />
+        <br />
+        <label for="address">Address: </label>
+        <input
+          class="input"
+          type="text"
+          name="address"
+          id="address"
+          maxlength="200"
+          required
+          value="Rua Exemplo 123"
+        />
+        <br />
+        <label for="city">City: </label>
+        <input
+          class="input"
+          type="text"
+          name="city"
+          id="city"
+          maxlength="28"
+          required
+          value="Rio Branco"
+        />
+        <br />
+        <label for="states">State: </label>
+        <select name="states" id="states" required></select>
+        <br />
+        <label for="house">
+          <input
+            type="radio"
+            name="type"
+            id="house"
+            checked
+            value="house"
+          />House
+        </label>
+        <label for="apartment">
+          <input
+            type="radio"
+            name="type"
+            id="apartment"
+            value="apartment"
+          />Apartment
+        </label>
+        <br />
+      </fieldset>
+
+      <fieldset id="previous-job">
+        <h1>Your last job:</h1>
+        <label for="curriculum">Curriculum:</label>
+        <br />
+        <textarea
+          class="input"
+          name="curriculum"
+          id="curriculum"
+          cols="30"
+          rows="10"
+          maxlength="1000"
+          required
+        >
+Exemple of text</textarea
+        >
+        <br />
+        <label for="role">Role: </label>
+        <input
+          class="input"
+          type="text"
+          name="role"
+          id="role"
+          maxlength="40"
+          required
+          value="Junior Web Developer"
+        />
+        <br />
+        <label for="role-description">Role description: </label>
+        <input
+          class="input"
+          type="text"
+          name="role-description"
+          id="role-description"
+          maxlength="500"
+          required
+          value="Intern"
+        />
+        <br />
+        <label for="start-date">Start date: </label>
+        <input
+          class="input"
+          type="text"
+          name="start-date"
+          id="start-date"
+          maxlength="500"
+          placeholder="dd/mm/yyyy"
+          value="05/12/2020"
+          required
+        />
+      </fieldset>
+      <button type="submit">Add</button>
+      <button type="button">Clear</button>
+    </form>
+    <div id="submit-response"></div>
+  </body>
+</html>
