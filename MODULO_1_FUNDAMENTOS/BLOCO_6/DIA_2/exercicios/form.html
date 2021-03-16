@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <!-- JustValidate -->
+    <script
+      src="./node_modules/just-validate/dist/js/just-validate.min.js"
+      defer
+    ></script>
+    <!-- DatePickerX -->
+    <link rel="stylesheet" href="./dist/css/DatePickerX.min.css" />
+    <script src="./dist/js/DatePickerX.min.js" defer></script>
+    <!-- BootStrap -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <script
+      src="./node_modules/bootstrap/dist/js/bootstrap.min.js"
+      defer
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="m-5">
+    <h1>Sing up</h1>
+    <form class="align-text-top w-75" id="form" action="" method="GET">
+      <fieldset class="d-inline-block" id="personal-data">
+        <h1>Personal data:</h1>
+        <div class="mx-3 mb-3">
+          <label class="form-label" class="form-label" for="name">Name: </label>
+          <input
+            data-validate-field="name"
+            class="form-control"
+            type="text"
+            name="name"
+            id="name"
+          />
+        </div>
+
+        <div class="mx-3 mb-3">
+          <label class="form-label" for="email">Email: </label>
+          <input
+            data-validate-field="email"
+            class="form-control"
+            type="email"
+            name="email"
+            id="email"
+            maxlength="50"
+            required
+          />
+        </div>
+        <div class="mx-3 mb-3">
+          <label class="form-label" for="cpf">CPF: </label>
+          <input
+            data-validate-field="cpf"
+            class="form-control"
+            type="text"
+            name="cpf"
+            id="cpf"
+            maxlength="11"
+            required
+          />
+        </div>
+        <div class="mx-3 mb-3">
+          <label class="form-label" for="address">Address: </label>
+          <input
+            data-validate-field="address"
+            class="form-control"
+            type="text"
+            name="address"
+            id="address"
+            maxlength="200"
+            required
+          />
+        </div>
+        <div class="mx-3 mb-3">
+          <label class="form-label" for="city">City: </label>
+          <input
+            data-validate-field="city"
+            class="form-control"
+            type="text"
+            name="city"
+            id="city"
+            maxlength="28"
+            required
+          />
+        </div>
+        <div class="mx-3 mb-3">
+          <label class="form-label" for="states">State: </label>
+          <select
+            data-validate-field="state"
+            class="form-select"
+            name="states"
+            id="states"
+          >
+            <!-- Adicionar atribulo selected -->
+            <option disabled selected>Select your state...</option>
+          </select>
+        </div>
+        <div class="mx-3 mb-3">
+          <input
+            data-validate-field="state"
+            class="form-check-input"
+            type="radio"
+            name="type"
+            id="house"
+          />
+          <label class="form-check-label" for="house"> House </label>
+          <input
+            data-validate-field="state"
+            class="form-check-input"
+            type="radio"
+            name="type"
+            id="apartment"
+          />
+          <label class="form-check-label" for="apartment"> Apartment </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="d-inline-block align-top" id="previous-job">
+        <h1>Your last job:</h1>
+        <div class="mx-3 mb-3">
+          <label class="form-label" for="curriculum">Curriculum:</label>
+
+          <textarea
+            data-validate-field="curriculum"
+            class="form-control"
+            name="curriculum"
+            id="curriculum"
+            cols="30"
+            rows="9"
+            maxlength="1000"
+            required
+          >
+Exemple of text</textarea
+          >
+        </div>
+        <div class="mx-3 mb-3">
+          <label class="form-label" for="role">Role: </label>
+          <input
+            data-validate-field="role"
+            class="form-control"
+            type="text"
+            name="role"
+            id="role"
+            maxlength="40"
+            required
+          />
+        </div>
+        <div class="mx-3 mb-3">
+          <label class="form-label" for="description">Role description: </label>
+          <input
+            data-validate-field="description"
+            class="form-control"
+            type="text"
+            name="description"
+            id="description"
+          />
+        </div>
+        <div class="mx-3 mb-3">
+          <label class="form-label" for="start-date">Start date: </label>
+          <input
+            data-validate-field="date"
+            class="form-control"
+            type="text"
+            name="start-date"
+            id="start-date"
+            maxlength="500"
+            placeholder="dd/mm/yyyy"
+            required
+          />
+        </div>
+      </fieldset>
+
+      <div class="my-3 w-75">
+        <button type="submit" class="btn btn-primary w-25 ms-3 me-4">
+          Add
+        </button>
+        <button type="button" class="btn btn-warning w-25">Clear</button>
+      </div>
+    </form>
+    <div id="submit-response"></div>
+  </body>
+</html>
