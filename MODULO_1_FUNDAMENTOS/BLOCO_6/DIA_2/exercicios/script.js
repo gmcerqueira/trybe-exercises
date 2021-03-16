@@ -37,44 +37,6 @@ for (const key in stateList) {
   states.appendChild(option);
 }
 
-
-
-// function verifyDate() {
-//   const inputDate = document.querySelector("#start-date").value;
-
-//   const dateValues = inputDate.match(/\d+/g);
-
-//   const day = dateValues[0];
-//   const month = dateValues[1];
-//   const year = dateValues[2];
-
-//   const verifyDay = day > 0 && day <= 31;
-//   const verifyMonth = month > 0 && month <= 12;
-//   const verifyYear = year > 0;
-
-//   if (!verifyDay) {
-//     alert("Invalid day value!\n Must be between 1 and 31");
-//   }
-//   if (!verifyMonth) {
-//     alert("Invalid month value!\n Must be between 1 and 12");
-//   }
-//   if (!verifyYear) {
-//     alert("Invalid year value!\n Shouldn't be negative");
-//   }
-// }
-
-const nameInput = document.querySelector("#name");
-const emailInput = document.querySelector("#email");
-const cpfInput = document.querySelector("#cpf");
-const addressInput = document.querySelector("#address");
-const cityInput = document.querySelector("#city");
-const stateInput = document.querySelector("#states");
-const curriculumInput = document.querySelector("#curriculum");
-const roleInput = document.querySelector("#role");
-const roleDescriptionInput = document.querySelector("#role-description");
-const startDateInput = document.querySelector("#start-date");
-const submitResponse = document.querySelector("#submit-response");
-
 function selectedInput() {
   const types = document.querySelectorAll("[name='type']");
   let selectedValue;
@@ -85,32 +47,7 @@ function selectedInput() {
   return selectedValue;
 }
 
-function createFormData() {
-  submitResponse.innerHTML = `
-  <h1>Personal data</h1>
-  Name: ${nameInput.value}<br>
-  Email: ${emailInput.value}<br>
-  CPF: ${cpfInput.value}<br>
-  Address: ${addressInput.value}<br>
-  City: ${cityInput.value}<br>
-  State: ${stateInput.value}<br>
-  Type: ${selectedInput()}<br>
-
-  <h1>Your las job</h1>
-  Curriculum: ${curriculumInput.value}<br>
-  Role: ${roleInput.value}<br>
-  Role Description: ${roleDescriptionInput.value}<br>
-  Start date: ${startDateInput.value}<br>
-  `;
-}
-
 const submitBtn = document.querySelector("[type='submit']");
-
-submitBtn.addEventListener("click", (event) => {
-  // verifyDate();
-  event.preventDefault();
-  createFormData();
-});
 
 const clearBtn = document.querySelector("[type='button']");
 
@@ -125,7 +62,85 @@ clearBtn.addEventListener("click", () => {
   select.value = "";
 });
 
-
 const inputDate = document.querySelector("#start-date").DatePickerX.init({
   format: "dd/mm/yyyy",
+});
+
+new JustValidate("#form", {
+  rules: {
+    name: {
+      required: true,
+      minLength: 3,
+      maxLength: 40,
+    },
+    email: {
+      required: true,
+      email: true,
+      maxLength: 50,
+    },
+    cpf: {
+      required: true,
+      maxLength: 11,
+    },
+    address: {
+      required: true,
+      maxLength: 200,
+    },
+    city: {
+      required: true,
+      maxLength: 28,
+    },
+    state: {
+      required: true,
+      value: true,
+    },
+    radio: {
+      required: true,
+    },
+    curriculum: {
+      required: true,
+      maxLength: 1000,
+    },
+    role: {
+      required: true,
+      maxLength: 40,
+    },
+    description: {
+      required: true,
+      maxLength: 500,
+    },
+    date: {
+      required: true,
+    },
+  },
+  messages: {
+    name: {
+      maxLength: "O limite é de 40 caracteres.",
+    },
+    email: {
+      email: "O email digitado não é válido.",
+      maxLength: "O limite é de 50 caracteres.",
+    },
+    cpf: {
+      maxLength: "O limite é de 11 caracteres.",
+    },
+    address: {
+      maxLength: "O limite é de 200 caracteres.",
+    },
+    city: {
+      maxLength: "O limite é de 28 caracteres.",
+    },
+    curriculum: {
+      maxLength: "O limite é de 1000 caracteres.",
+    },
+    role: {
+      maxLength: "O limite é de 40 caracteres.",
+    },
+    description: {
+      maxLength: "O limite é de 500 caracteres.",
+    },
+  },
+  submitHandler: function (form, values) {
+    console.log(form, values);
+  },
 });
