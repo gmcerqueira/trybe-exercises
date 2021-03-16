@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <!-- JustValidate -->
+    <script src="./node_modules/just-validate/dist/js/just-validate.min.js"></script>
+    <!-- DatePickerX -->
+    <link rel="stylesheet" href="./dist/css/DatePickerX.min.css" />
+    <script src="./dist/js/DatePickerX.min.js"></script>
+    <!-- BootStrap -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body class="ms-3 w-50">
+    <h1>Sing up</h1>
+    <form class="align-text-top" action="" method="GET">
+      <fieldset class="d-inline-block" id="personal-data">
+        <h1>Personal data:</h1>
+        <div class="mx-3 mb-3">
+          <label class="form-label" class="form-label" for="name">Name: </label>
+          <input
+            class="form-control"
+            type="text"
+            name="name"
+            id="name"
+            maxlength="40"
+            required
+            value="Lucas Oliveira"
+          />
+        </div>
+
+        <div class="mx-3 mb-3">
+          <label class="form-label" for="email">Email: </label>
+          <input
+            class="form-control"
+            type="email"
+            name="email"
+            id="email"
+            maxlength="50"
+            required
+            value="exemplo@exemplo.com"
+          />
+        </div>
+        <div class="mx-3 mb-3">
+          <label class="form-label" for="cpf">CPF: </label>
+          <input
+            class="form-control"
+            type="text"
+            name="cpf"
+            id="cpf"
+            maxlength="11"
+            required
+            value="12345678910"
+          />
+        </div>
+        <div class="mx-3 mb-3">
+          <label class="form-label" for="address">Address: </label>
+          <input
+            class="form-control"
+            type="text"
+            name="address"
+            id="address"
+            maxlength="200"
+            required
+            value="Rua Exemplo 123"
+          />
+        </div>
+        <div class="mx-3 mb-3">
+          <label class="form-label" for="city">City: </label>
+          <input
+            class="form-control"
+            type="text"
+            name="city"
+            id="city"
+            maxlength="28"
+            required
+            value="Rio Branco"
+          />
+        </div>
+        <div class="mx-3 mb-3">
+          <label class="form-label" for="states">State: </label>
+          <select class="form-select" name="states" id="states" required>
+            <option value="" disabled selected>Select your state...</option>
+          </select>
+        </div>
+        <div class="mx-3 mb-3">
+          <input type="radio" name="type" id="house" checked value="house" />
+          <label class="form-check-label" for="house"> House </label>
+          <input
+            class="form-check-input"
+            type="radio"
+            name="type"
+            id="apartment"
+            value="apartment"
+          />
+          <label class="form-check-label" for="apartment"> Apartment </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="d-inline-block align-top" id="previous-job">
+        <h1>Your last job:</h1>
+        <div class="mx-3 mb-3">
+          <label class="form-label" for="curriculum">Curriculum:</label>
+
+          <textarea
+            class="form-control"
+            name="curriculum"
+            id="curriculum"
+            cols="30"
+            rows="9"
+            maxlength="1000"
+            required
+          >
+Exemple of text</textarea
+          >
+        </div>
+        <div class="mx-3 mb-3">
+          <label class="form-label" for="role">Role: </label>
+          <input
+            class="form-control"
+            type="text"
+            name="role"
+            id="role"
+            maxlength="40"
+            required
+            value="Junior Web Developer"
+          />
+        </div>
+        <div class="mx-3 mb-3">
+          <label class="form-label" for="role-description"
+            >Role description:
+          </label>
+          <input
+            class="form-control"
+            type="text"
+            name="role-description"
+            id="role-description"
+            maxlength="500"
+            required
+            value="Intern"
+          />
+        </div>
+        <div class="mx-3 mb-3">
+          <label class="form-label" for="start-date">Start date: </label>
+          <input
+            class="form-control"
+            type="text"
+            name="start-date"
+            id="start-date"
+            maxlength="500"
+            placeholder="dd/mm/yyyy"
+            value="05/12/2020"
+            required
+          />
+        </div>
+      </fieldset>
+
+      <div class="my-3">
+        <button type="submit" class="btn btn-primary w-25 ms-3 me-4">
+          Add
+        </button>
+        <button type="button" class="btn btn-warning w-25">Clear</button>
+      </div>
+    </form>
+    <div id="submit-response"></div>
+  </body>
+</html>
