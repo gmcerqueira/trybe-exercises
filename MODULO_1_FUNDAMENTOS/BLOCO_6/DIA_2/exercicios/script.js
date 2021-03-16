@@ -30,9 +30,6 @@ const stateList = {
   TO: "Tocantins",
 };
 
-// const blankOption = document.createElement("option");
-// blankOption.innerHTML = "Select your state";
-// states.appendChild(blankOption);
 for (const key in stateList) {
   const option = document.createElement("option");
   option.innerHTML = stateList[key];
@@ -40,29 +37,31 @@ for (const key in stateList) {
   states.appendChild(option);
 }
 
-function verifyDate() {
-  const inputDate = document.querySelector("#start-date").value;
 
-  const dateValues = inputDate.match(/\d+/g);
 
-  const day = dateValues[0];
-  const month = dateValues[1];
-  const year = dateValues[2];
+// function verifyDate() {
+//   const inputDate = document.querySelector("#start-date").value;
 
-  const verifyDay = day > 0 && day <= 31;
-  const verifyMonth = month > 0 && month <= 12;
-  const verifyYear = year > 0;
+//   const dateValues = inputDate.match(/\d+/g);
 
-  if (!verifyDay) {
-    alert("Invalid day value!\n Must be between 1 and 31");
-  }
-  if (!verifyMonth) {
-    alert("Invalid month value!\n Must be between 1 and 12");
-  }
-  if (!verifyYear) {
-    alert("Invalid year value!\n Shouldn't be negative");
-  }
-}
+//   const day = dateValues[0];
+//   const month = dateValues[1];
+//   const year = dateValues[2];
+
+//   const verifyDay = day > 0 && day <= 31;
+//   const verifyMonth = month > 0 && month <= 12;
+//   const verifyYear = year > 0;
+
+//   if (!verifyDay) {
+//     alert("Invalid day value!\n Must be between 1 and 31");
+//   }
+//   if (!verifyMonth) {
+//     alert("Invalid month value!\n Must be between 1 and 12");
+//   }
+//   if (!verifyYear) {
+//     alert("Invalid year value!\n Shouldn't be negative");
+//   }
+// }
 
 const nameInput = document.querySelector("#name");
 const emailInput = document.querySelector("#email");
@@ -108,16 +107,25 @@ function createFormData() {
 const submitBtn = document.querySelector("[type='submit']");
 
 submitBtn.addEventListener("click", (event) => {
+  // verifyDate();
   event.preventDefault();
-  verifyDate();
   createFormData();
 });
 
 const clearBtn = document.querySelector("[type='button']");
 
 clearBtn.addEventListener("click", () => {
-  const values = document.querySelectorAll(".input");
-  for (let i = 0; i < values.length; i += 1) {
-    values[i].value = ''
+  const inputs = document.querySelectorAll("input");
+  const textArea = document.querySelector("textarea");
+  const select = document.querySelector("select");
+  for (let i = 0; i < inputs.length; i += 1) {
+    inputs[i].value = "";
   }
+  textArea.value = "";
+  select.value = "";
+});
+
+
+const inputDate = document.querySelector("#start-date").DatePickerX.init({
+  format: "dd/mm/yyyy",
 });
