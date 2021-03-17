@@ -20,8 +20,14 @@
 
 .header-container {
   display: flex;
-  background-color: grey;
+  background-color: dimgrey;
   color: white;
   justify-content: space-around;
   align-items: center;
+}
+
+.paragraph {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
 }
