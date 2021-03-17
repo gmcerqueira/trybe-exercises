@@ -29,5 +29,29 @@
 .paragraph {
   display: flex;
   justify-content: center;
-  margin: 10px 0;
+  margin-top: 20px;
 }
+
+.cards-container{
+  display: flex;
+  margin: 20px auto;
+  justify-content: center;
+  width: 630px;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: whitesmoke;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow:  1px 1px 5px 0px #c0c0c0;
+}
+
+.card-title {
+  margin-bottom: 10px;
+}
+
