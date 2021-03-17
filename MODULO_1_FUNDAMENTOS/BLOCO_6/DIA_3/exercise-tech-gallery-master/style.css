@@ -15,7 +15,7 @@
 
 .social-img {
   width: 25px;
-  margin-left: 10px;
+  margin: 0 10px;
 }
 
 .header-container {
@@ -32,7 +32,7 @@
   margin-top: 20px;
 }
 
-.cards-container{
+.cards-container {
   display: flex;
   margin: 20px auto;
   justify-content: center;
@@ -48,10 +48,27 @@
   margin: 10px;
   padding: 20px;
   border-radius: 15px;
-  box-shadow:  1px 1px 5px 0px #c0c0c0;
+  box-shadow: 1px 1px 5px 0px #c0c0c0;
 }
 
 .card-title {
   margin-bottom: 10px;
 }
 
+.footer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.footer hr {
+  width: 210px;
+  border: 0;
+  border-top: 2px solid rgb(230, 230, 230);
+}
+
+.social-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
