@@ -110,3 +110,24 @@ body {
   margin: 0 0 10px 0;
   font-size: 18px;
 }
+
+@media screen and (min-width: 768px) {
+  .header-container  {
+    width: 750px;
+  }
+
+  .aside-container {
+    flex-flow: row;
+    justify-content: space-evenly;
+  }
+
+  .info-list li{
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .info-list li span {
+    display: block;
+    text-align: center;
+  }
+}
