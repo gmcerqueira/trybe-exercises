@@ -112,7 +112,7 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .header-container  {
+  .header-container {
     width: 750px;
   }
 
@@ -121,7 +121,7 @@ body {
     justify-content: space-evenly;
   }
 
-  .info-list li{
+  .info-list li {
     margin-bottom: 10px;
     font-size: 20px;
   }
@@ -129,5 +129,32 @@ body {
   .info-list li span {
     display: block;
     text-align: center;
+  }
+
+  @media screen and (min-width: 1024px) {
+    body {
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      width: 1024px;
+    }
+
+    .header-title {
+      font-size: 42px;
+      font-weight: 700;
+      margin: 20px 0;
+    }
+
+    .nav-item {
+      font-size:20px;
+    }
+    .main-content h1 {
+      font-size: 32px;
+    }
+    .main-content p {
+      margin: 0 0 10px 0;
+      font-size: 24px;
+    }
   }
 }
