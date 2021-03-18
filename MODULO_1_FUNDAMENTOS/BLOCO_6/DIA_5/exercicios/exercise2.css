@@ -1,0 +1,112 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 10px;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+}
+
+.header-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.nav-bar {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.nav-item {
+  text-decoration: none;
+  font-weight: 600;
+  color: black;
+}
+
+.aside-container {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.aside-one {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.chapters {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  list-style-type: upper-roman;
+  margin: 0;
+}
+
+.chapters li {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.aside-two {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.aside-two h2 {
+  margin-bottom: 10px;
+}
+
+.info-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.info-list h4 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.info-list li span {
+  font-weight: 700;
+}
+
+.main-content {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: justify;
+  padding: 0 20px;
+}
+
+.main-content h1 {
+  font-size: 26px;
+}
+.main-content p {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
