@@ -40,9 +40,18 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 - [x] 5-1: _JavaScript - DOM e seletores_
 - [x] 5-2: _JavaScript - Trabalhando com elementos_
 - [x] 5-3: _JavaScript - Eventos_
-- [ ] 5-4: _JavaScript - Web Storage_
-- [ ] 5-6: _[Projeto - Arte com Pixels]()_
-- [ ] 5-7: _[Projeto - Lista de tarefas]()_
-- [ ] 5-5: _[Projeto - Meme Generator]()_
-- [ ] 5-7: _[Projeto - Adivinhe a Cor]()_
-- [ ] 5-7: _[Projeto - Carta Misteriosa]()_ 
+- [x] 5-4: _JavaScript - Web Storage_
+- [x] 5-6: _[Projeto - Arte com Pixels](https://github.com/tryber/sd-010-b-project-pixels-art/tree/gmcerqueira-project-pixels-art)_
+- [x] 5-7: _[Projeto - Lista de tarefas](https://github.com/tryber/sd-010-b-project-todo-list/tree/gmcerqueira-todo-list-project)_
+- [x] 5-5: _[Projeto - Meme Generator](https://github.com/tryber/sd-010-b-project-meme-generator/tree/gmcerqueira-meme-generator-project)_
+- [x] 5-7: _[Projeto - Adivinhe a Cor](https://github.com/tryber/sd-010-b-project-color-guess/tree/gmcerqueira-project-color-guess)_
+- [x] 5-7: _[Projeto - Carta Misteriosa](https://github.com/tryber/sd-010-b-project-mistery-letter/tree/gmcerqueira-project-mistery-letter)_ 
+
+##### Bloco 6: HTML & CSS avançado
+
+- [x] 6-1: _HTML & CSS - Forms_
+- [x] 6-2: _Bibliotecas JavaScript e Frameworks CSS_
+- [x] 6-3: _CSS Flexbox - Part 1_
+- [x] 6-4: _CSS Flexbox - Part 2_
+- [ ] 6-5: _CSS Responsivo - Mobile First_
+- [ ] 6-6: _[Projeto - Página inicial do Facebook]()_
