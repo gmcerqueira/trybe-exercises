@@ -1,5 +1,17 @@
 {
+  "scripts": {
+    "test": "jest --watchAll",
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js",
+    "lint:styles": "stylelint **/*.css --config .stylelintrc.json --ignore-disables --allow-empty-input"
+  },
   "dependencies": {
     "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-trybe-fundamentals": "1.1.0",
+    "stylelint": "13.8.0",
+    "stylelint-config-standard": "20.0.0",
+    "jest": "^26.6.3"
   }
 }
