@@ -1,0 +1,12 @@
+.pokedex{
+  padding: 10px;
+}
+
+.pokedex-title {
+  margin-bottom: 30px;
+}
+
+.pokedex-pokemons {
+  display: flex;
+  flex-wrap: wrap;
+}
