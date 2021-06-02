@@ -1,6 +1,3 @@
-const NEW_ACTION = "NEW_ACTION";
-const OLD_ACTION = "OLD_ACTION";
+export const LOGIN = "LOGIN";
 
-export const newAction = (state) => ({ type: NEW_ACTION, state });
-
-export const oldAction = (state) => ({ type: OLD_ACTION, state });
+export const login = () => ({ type: LOGIN, payload: true  });
