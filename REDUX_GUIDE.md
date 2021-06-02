@@ -32,12 +32,12 @@ _**Dica:** na pasta da aplicação utilize o comando abaixo para criar os três 
 cd src/actions && touch index.js && cd ../reducers && touch index.js && cd ../store && touch index.js && cd ../../
 ```
 
-_No arquivo App.js:_
+_No arquivo src/index.js:_
 
 - [ ] definir o Provider, `<Provider store={ store }>`, para fornecer os estados à todos os componentes encapsulados em `<App />`.
 
 ```js
-// src/App.js
+// src/index.js
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
