@@ -2,5 +2,20 @@
   "cSpell.words": [
     "Pokedex",
     "pokemons"
+  ],
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "Local",
+      "username": "root",
+      "password": "12345678",
+      "database": "sakila"
+    }
   ]
 }
