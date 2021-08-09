@@ -1,0 +1,19 @@
+CREATE DATABASE IF NOT EXISTS albums;
+USE albums;
+CREATE TABLE singers(
+  singer_id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(50) NOT NULL
+) ENGINE = InnoDB;
+CREATE TABLE styles(
+  style_id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(50) NOT NULL
+) ENGINE = InnoDB;
+CREATE TABLE albums(
+  album_id INT PRIMARY KEY AUTO_INCREMENT,
+  singer_id INT NOT NULL,
+  title VARCHAR(100) NOT NULL,
+  PRICE DECIMAL(5, 2) NOT NULL,
+  style_id INT NOT NULL,
+  FOREIGN KEY (singer_id) REFERENCES singers(singer_id),
+  FOREIGN KEY (style_id) REFERENCES styles(style_id)
+) ENGINE = InnoDB;
