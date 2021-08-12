@@ -1,0 +1,5 @@
+use("class");
+
+db.superheroes.count({ "aspects.eyeColor": "blue" });
+// or
+db.superheroes.count({ "aspects.eyeColor": { $eq: "blue" } });
