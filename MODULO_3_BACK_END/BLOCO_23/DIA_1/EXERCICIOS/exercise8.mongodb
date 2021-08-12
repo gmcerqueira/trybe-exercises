@@ -1,0 +1,3 @@
+use("class");
+
+db.books.count({ status: "PUBLISH" });

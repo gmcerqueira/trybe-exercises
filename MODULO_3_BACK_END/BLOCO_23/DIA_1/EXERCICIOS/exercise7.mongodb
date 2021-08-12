@@ -1,0 +1,5 @@
+// mongoimport --db class --collection books /home/gmcerqueira/00-trybe/exercises/MODULO_3_BACK_END/books.json
+
+use("class");
+
+db.books.count();
