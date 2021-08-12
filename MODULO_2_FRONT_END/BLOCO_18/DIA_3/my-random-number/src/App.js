@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 
 function App() {
@@ -25,6 +26,16 @@ function App() {
       <p>{randomNum}</p>
       <p>{numMsg}</p>
     </div>
+=======
+import RandomProvider from './context/RandomProvider'
+import RandomNumContainer from './components/RandomNumContainer'
+
+function App() {
+  return (
+    <RandomProvider>
+      <RandomNumContainer/>
+    </RandomProvider>
+>>>>>>> exercises/20.1
   );
 }
 
