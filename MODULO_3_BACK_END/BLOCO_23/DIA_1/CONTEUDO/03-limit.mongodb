@@ -1,0 +1,6 @@
+use("test");
+
+db.bios.find().limit(5);
+
+db.bios.find().limit(5).pretty();
+// SELECT * FROM bios LIMIT 5;

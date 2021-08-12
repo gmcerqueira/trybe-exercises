@@ -1,0 +1,20 @@
+use("test");
+
+db.bios.find();
+// SELECT * FROM bios;
+
+db.movies.findOne({ title: "Forrest Gump" }, { title: 1, imdb_rating: 1 });
+
+db.movies.findOne(
+  { title: "Forrest Gump" },
+  { title: 1, imdb_rating: 1, _id: 0 }
+);
+
+db.bios.find({ _id: 5 });
+// SELECT * FROM bios WHERE _id = 5;
+
+db.bios.find({ "name.last": "Hopper" });
+// SELECT * FROM bios WHERE name.las = "Hopper";
+
+db.bios.find({}, { name: 1 });
+// SELECT name FROM bios;
