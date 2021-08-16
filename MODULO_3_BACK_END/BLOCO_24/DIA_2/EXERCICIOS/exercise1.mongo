@@ -1,0 +1,18 @@
+// {
+//   title: "Batman",
+//   category: [
+//     "action",
+//     "adventure",
+//   ],
+//   imdbRating: 7.7,
+//   budget: 35,
+// }
+
+db.movies.updateOne(
+  { title: "Batman" },
+  {
+    $push: { category: "superhero" },
+  }
+);
+
+db.movies.find().pretty();

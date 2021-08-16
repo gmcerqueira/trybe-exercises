@@ -1,0 +1,21 @@
+// { _id: 1, item: "polarizing_filter", tags: ["electronics", "camera"] }
+
+// Adicionando ao array
+db.inventory.updateOne({ _id: 1 }, { $addToSet: { tags: "accessories" } });
+
+// Se o valor existir, não surte efeito
+// { "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 0 }
+db.inventory.updateOne({ _id: 1 }, { $addToSet: { tags: "camera" } });
+
+// Com o modificador $each
+// { _id: 2, item: "cable", tags: ["electronics", "supplies"] }
+db.inventory.updateOne(
+  { _id: 2 },
+  {
+    addToSet: {
+      tags: {
+        each: ["camera", "electronics", "accessories"],
+      },
+    },
+  }
+);
