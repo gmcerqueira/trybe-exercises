@@ -1,0 +1,9 @@
+db.inventory.find({ tags: ["red", "blank"] });
+
+db.inventory.find({ tags: { $all: ["red", "blank"] } });
+
+db.inventory.find({ tags: { $all: ["ssl", "security"] } });
+// ==
+db.inventory.find({
+  and: [{ tags: "ssl" }, { tags: "security" }],
+});
