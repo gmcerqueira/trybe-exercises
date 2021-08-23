@@ -1,0 +1,11 @@
+// Exemplo 1: Igualdade simples
+db.articles.aggregate([{ $match: { author: "dave" } }]);
+
+// Exemplo 2: Igualdade complexa
+db.articles.aggregate([
+  {
+    $match: {
+      $or: [{ score: { $gt: 70, $lt: 90 } }, { views: { $gte: 1000 } }],
+    },
+  }
+]);

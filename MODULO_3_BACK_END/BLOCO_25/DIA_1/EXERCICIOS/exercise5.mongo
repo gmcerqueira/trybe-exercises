@@ -1,0 +1,5 @@
+db.clientes.aggregate([
+  {
+    $group: { _id: "$sexo", totalClientesSexo: { $sum: 1 } },
+  }
+]);
