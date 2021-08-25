@@ -1,0 +1,20 @@
+{
+  "name": "my-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "bmi": "node bmi.js",
+    "avgVelocity": "node avgVelocity.js",
+    "guessNumber": "node guessNumber.js",
+    "factorial": "node factorial.js",
+    "fibonacci": "node fibonacci.js"
+  },
+  "author": "Gustavo Cerqueira",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
