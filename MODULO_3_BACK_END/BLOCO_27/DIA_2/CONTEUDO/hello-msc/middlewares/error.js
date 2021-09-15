@@ -27,5 +27,5 @@ module.exports = (err, _req, res, _next) => {
   const status = statusByErrorCode[err.code] || 500;
 
   // Por último, retornamos o status e a mensagem de erro para o client
-  res.status(status).json({ error: { message: err.message } });
+  res.status(status).json({ err: { code: err.code, message: err.message } });
 };
