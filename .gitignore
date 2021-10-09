@@ -6,7 +6,7 @@
 *.code-workspace
 **node_modules/
 **/.git/
-/home/gmcerqueira/00-trybe/exercises/MODULO_3_BACK_END/BLOCO_29/DIA_1/EXERCICIOS/heroku-exercise/.git
+
 
 # Local History for Visual Studio Code
 .history/
