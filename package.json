@@ -5,6 +5,7 @@
     "lint:styles": "stylelint **/*.css --config .stylelintrc.json --ignore-disables --allow-empty-input"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {
